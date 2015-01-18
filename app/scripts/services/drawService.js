@@ -6,7 +6,7 @@ angular.module('carDataApp').service('drawService', function() {
   };
   var drawPackCircles = function(data, ele, param){
 
-      var diameter = 960;
+      var diameter = 800;
 
       /*var color = d3.scale.category10();*/
       var color = d3.scale.quantize()
