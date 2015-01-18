@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body ng-app="carDataApp">
+
+
+    <!-- Add your site or application content here -->
+    <div class="container-fluid">
+
+        <div class="header">
+          <h3 class="text-muted">Car Data Visualization</h3>
+        </div>
+      <div class="row">
+      <div class="btn-group col-md-2">
+        <button class="btn btn-default active" type="button" ng-click="changeVisualizationParameter($event,'carName')">Car Name</button>
+        <button class="btn btn-default" type="button" ng-click="changeVisualizationParameter($event,'symboling')">Safety</button>
+      </div>
+      </div>
+      <div class="row">&nbsp;</div>
+      <div class="row">
+        <div bubble-chart id="chart" class="pull-left col-md-9"></div>
+        <div class="col-md-3">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th>
+                HorsePower Range
+              </th>
+              <th>
+                Color
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+              <td>
+                0-130
+              </td>
+              <td class="colorCode" bgcolor="#58D3F7"></td>
+            </tr>
+            <tr>
+              <td>
+                131-260
+              </td>
+              <td class="colorCode"  bgcolor="#045FB4"></td>
+            </tr>
+            <tr>
+              <td>
+                261-390
+              </td>
+              <td class="colorCode" bgcolor="#0B243B"></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/d3-tip/index.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js(.) scripts.min.js -->
+         <script src="scripts.min.js"></script>
+
+
+</body>
+</html>
