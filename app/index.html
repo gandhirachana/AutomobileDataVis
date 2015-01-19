@@ -16,7 +16,7 @@
     <!-- endbuild -->
 
   </head>
-  <body ng-app="carDataApp">
+  <body ng-app="carDataApp" ng-controller='mainCtrl'>
 
 
     <!-- Add your site or application content here -->
@@ -33,7 +33,7 @@
       </div>
       <div class="row">&nbsp;</div>
       <div class="row">
-        <div bubble-chart id="chart" class="pull-left col-md-9"></div>
+        <div bubble-chart data="data" id="chart" class="pull-left col-md-9"></div>
         <div class="col-md-3">
           <table class="table table-bordered">
             <thead>

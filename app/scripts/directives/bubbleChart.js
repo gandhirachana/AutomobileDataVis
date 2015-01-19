@@ -1,9 +1,12 @@
 angular.module('carDataApp').directive('bubbleChart',['drawService','tooltipService',function(drawService, tooltipService){
   return {
     restrict: 'A',
-    controller: 'MainCtrl',
+    controller: 'bubbleChartCtrl',
+    scope:{
+      data:'='
+    },
 
-    link:function(scope, ele, attrs, mainCtrl){
+    link:function(scope, ele, attrs, bubbleChartCtrl){
 
       scope.$watch('data',function(newVal, oldVal){
         if(newVal){
